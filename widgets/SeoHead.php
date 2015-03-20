@@ -4,7 +4,7 @@
  * @author Christoffer Niska <ChristofferNiska@gmail.com>
  * @copyright Copyright &copy; Christoffer Niska 2013-
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
- * @package crisu83.yii-seo.widgets
+ * @package chemezov.yii-seo.widgets
  */
 
 class SeoHead extends CWidget

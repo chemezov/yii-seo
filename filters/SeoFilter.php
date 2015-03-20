@@ -4,7 +4,7 @@
  * @author Christoffer Niska <ChristofferNiska@gmail.com>
  * @copyright Copyright &copy; Christoffer Niska 2013-
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
- * @package crisu83.yii-seo.filters
+ * @package chemezov.yii-seo.filters
  */
 
 class SeoFilter extends CFilter
@@ -21,7 +21,7 @@ class SeoFilter extends CFilter
         if (isset($_GET['id']) && method_exists($controller, 'loadModel'))
         {
             $model = $controller->loadModel($_GET['id']);
-            $url = $model->createUrl();
+            $url = $model->getAbsoluteUrl();
             if (strpos(Yii::app()->request->getRequestUri(), $url) === false)
                 $controller->redirect($url, true, 301);
         }

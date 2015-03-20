@@ -3,13 +3,15 @@ yii-seo
 
 Search engine optimization for the Yii PHP framework.
 
+Based on crisu83's [yii-seo](https://github.com/crisu83/yii-seo).
+
 ## Usage
 
 In layout
 
 ```
     <?php Yii::app()->controller->widget(
-        'vendor.crisu83.yii-seo.widgets.SeoHead',
+        'vendor.chemezov.yii-seo.widgets.SeoHead',
         array(
             'httpEquivs'         => array(
                 'Content-Type'     => 'text/html; charset=utf-8',
@@ -29,14 +31,14 @@ In Controller
     public function behaviors()
     {
         return array(
-            'seo' => array('class' => 'vendor.crisu83.yii-seo.behaviors.SeoBehavior'),
+            'seo' => array('class' => 'vendor.chemezov.yii-seo.behaviors.SeoBehavior'),
         );
     }
 
     public function filters()
     {
         return array(
-            array('vendor.crisu83.yii-seo.filters.SeoFilter + view'), // apply the filter to the view-action
+            array('vendor.chemezov.yii-seo.filters.SeoFilter + view'), // apply the filter to the view-action
         );
     }
 ```

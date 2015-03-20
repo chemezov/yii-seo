@@ -4,7 +4,7 @@
  * @author Christoffer Niska <ChristofferNiska@gmail.com>
  * @copyright Copyright &copy; Christoffer Niska 2013-
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
- * @package crisu83.yii-seo.behaviors
+ * @package chemezov.yii-seo.behaviors
  */
 
 class SeoActiveRecordBehavior extends CActiveRecordBehavior
@@ -23,7 +23,7 @@ class SeoActiveRecordBehavior extends CActiveRecordBehavior
      * @param array $params additional GET parameters (name=>value)
      * @return string the URL
      */
-    public function createUrl($params=array())
+    public function getUrl($params=array())
     {
         return Yii::app()->createUrl($this->route, CMap::mergeArray($params, $this->evaluateParams($this->params)));
     }
@@ -33,7 +33,7 @@ class SeoActiveRecordBehavior extends CActiveRecordBehavior
      * @param array $params additional GET parameters (name=>value)
      * @return string the URL
      */
-    public function createAbsoluteUrl($params=array())
+    public function getAbsoluteUrl($params=array())
     {
         return Yii::app()->createAbsoluteUrl($this->route, CMap::mergeArray($params, $this->evaluateParams($this->params)));
     }
