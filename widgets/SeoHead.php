@@ -48,6 +48,8 @@ class SeoHead extends CWidget
 
         if ($behavior !== null && $behavior->title !== null)
             $this->_title = $behavior->title;
+        elseif (!empty($this->controller->pageTitle))
+            $this->_title = $this->controller->pageTitle;
         else if ($this->defaultTitle !== null)
             $this->_title = $this->defaultTitle;
 
