@@ -21,7 +21,7 @@ class SeoFilter extends CFilter
         if (isset($_GET['id']) && method_exists($controller, 'loadModel'))
         {
             $model = $controller->loadModel($_GET['id']);
-            $url = $model->getAbsoluteUrl();
+            $url = $model->getUrl();
             if (strpos(Yii::app()->request->getRequestUri(), $url) === false)
                 $controller->redirect($url, true, 301);
         }
