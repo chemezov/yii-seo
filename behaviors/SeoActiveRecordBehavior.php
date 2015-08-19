@@ -25,7 +25,7 @@ class SeoActiveRecordBehavior extends CActiveRecordBehavior
      */
     public function getUrl($params=array())
     {
-        return Yii::app()->createUrl($this->route, CMap::mergeArray($params, $this->evaluateParams($this->params)));
+        return Yii::app()->createUrl($this->route, CMap::mergeArray($this->evaluateParams($this->params), $params));
     }
 
     /**
@@ -35,7 +35,7 @@ class SeoActiveRecordBehavior extends CActiveRecordBehavior
      */
     public function getAbsoluteUrl($params=array())
     {
-        return Yii::app()->createAbsoluteUrl($this->route, CMap::mergeArray($params, $this->evaluateParams($this->params)));
+        return Yii::app()->createAbsoluteUrl($this->route, CMap::mergeArray($this->evaluateParams($this->params), $params));
     }
 
     /**
